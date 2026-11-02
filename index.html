@@ -3,34 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midnight Chapter Club | Aesthetic Literary Apparel</title>
+    <title>Midnight Chapter Club | Aesthetic Literary & Streetwear Apparel</title>
     
-    <!-- Pinterest Verification Placeholder (Paste your Pinterest verification code here if needed) -->
-    <!-- <meta name="p:domain_verify" content="PASTE_YOUR_PINTEREST_CODE_HERE"/> -->
-
-    <meta name="description" content="Aesthetic apparel, cozy graphic tees, hoodies, and tote bags for book lovers, late-night readers, and dark academia souls. Officially printed & fulfilled by TeePublic.">
+    <!-- SEO & Social OpenGraph -->
+    <meta name="description" content="Aesthetic apparel, graphic tees, hoodies, and totes for book lovers, late-night readers, and dark academia obsessives. Officially printed & fulfilled by TeePublic.">
     <meta property="og:title" content="Midnight Chapter Club | Bookish & Dark Academia Apparel">
-    <meta property="og:description" content="Limited introductory sale: all graphic tees $16. Discover apparel for readers and fiction lovers.">
-    <meta property="og:image" content="./pin_1_male_lifestyle.jpg">
+    <meta property="og:description" content="Limited 72-hour introductory launch: all graphic tees $16. Discover apparel for readers and fiction lovers.">
+    <meta property="og:image" content="./catalog_1_emotionally_attached.jpg">
     <meta property="og:type" content="website">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg-color: #0d0c10;
-            --card-bg: #16141c;
-            --card-border: rgba(212, 185, 145, 0.2);
-            --gold-accent: #d4b991;
-            --gold-light: #f5efe8;
-            --text-primary: #f0ebe4;
-            --text-secondary: #a89f94;
-            --sale-red: #e65c5c;
-            --btn-bg: #1c1924;
-            --btn-border: #d4b991;
+            --bg-main: #ffffff;
+            --bg-subtle: #f9f8f6;
+            --card-bg: #ffffff;
+            --card-border: #e8e4de;
+            --card-border-hover: #1a1a1a;
+            --text-title: #111111;
+            --text-body: #4a4641;
+            --text-muted: #78736b;
+            --accent-gold: #96763e;
+            --accent-gold-light: #f5eedf;
+            --sale-red: #c93b3b;
+            --btn-dark: #111111;
+            --btn-dark-hover: #2d2a26;
+            --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
         }
 
         * {
@@ -41,423 +44,671 @@
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
+            background-color: var(--bg-main);
+            color: var(--text-body);
             font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Announcement Bar */
+        /* Announcement Header */
         .announcement-bar {
-            background: linear-gradient(90deg, #1f1b26, #2d2636, #1f1b26);
-            border-bottom: 1px solid var(--card-border);
+            background-color: #111111;
+            color: #ffffff;
             text-align: center;
-            padding: 10px 15px;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            color: var(--gold-accent);
+            padding: 11px 20px;
+            font-size: 0.8rem;
+            letter-spacing: 1.8px;
             text-transform: uppercase;
-            font-weight: 500;
+            font-weight: 600;
         }
 
-        .announcement-bar span {
-            color: var(--sale-red);
+        .announcement-bar span.highlight {
+            color: #e5b869;
             font-weight: 700;
         }
 
-        /* Header */
+        /* Store Header */
         header {
-            max-width: 1200px;
+            max-width: 1240px;
             margin: 0 auto;
-            padding: 40px 20px 30px;
+            padding: 50px 24px 35px;
             text-align: center;
         }
 
-        .brand-logo {
-            width: 80px;
-            height: 80px;
+        .brand-avatar {
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
-            border: 2px solid var(--gold-accent);
-            margin: 0 auto 15px;
+            border: 2px solid var(--accent-gold);
+            margin: 0 auto 18px;
             display: block;
             object-fit: cover;
-            box-shadow: 0 0 25px rgba(212, 185, 145, 0.15);
+            box-shadow: 0 4px 15px rgba(150, 118, 62, 0.2);
+            transition: transform 0.3s ease;
         }
 
-        h1 {
+        .brand-avatar:hover {
+            transform: scale(1.05);
+        }
+
+        h1.brand-title {
             font-family: 'Cinzel', serif;
-            font-size: 2.4rem;
-            letter-spacing: 3px;
-            color: var(--gold-light);
+            font-size: 2.6rem;
+            letter-spacing: 4px;
+            color: var(--text-title);
             margin-bottom: 8px;
+            font-weight: 700;
             text-transform: uppercase;
         }
 
         .tagline {
             font-family: 'Playfair Display', serif;
             font-style: italic;
-            font-size: 1.15rem;
-            color: var(--gold-accent);
-            max-width: 600px;
-            margin: 0 auto 15px;
+            font-size: 1.18rem;
+            color: var(--text-muted);
+            margin-bottom: 22px;
         }
 
-        .trust-pill {
+        .header-meta {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .header-meta span {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(212, 185, 145, 0.08);
-            border: 1px solid var(--card-border);
-            padding: 6px 16px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
+            gap: 6px;
         }
 
-        /* Products Grid */
-        .container {
-            max-width: 1200px;
+        .header-meta span strong {
+            color: var(--text-title);
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: var(--accent-gold);
             margin: 0 auto;
-            padding: 20px 20px 60px;
         }
 
-        .grid {
+        /* Catalog Section */
+        main {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 30px 24px 80px;
+        }
+
+        .catalog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 16px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .catalog-count {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            letter-spacing: 2px;
+            color: var(--text-title);
+            text-transform: uppercase;
+        }
+
+        .catalog-notice {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .catalog-notice .badge {
+            background-color: var(--accent-gold-light);
+            color: var(--accent-gold);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.75rem;
+        }
+
+        /* Product Grid */
+        .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 36px;
         }
 
         /* Product Card */
-        .card {
+        .product-card {
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 12px;
+            border-radius: 4px;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
             display: flex;
             flex-direction: column;
-            position: relative;
+            box-shadow: var(--shadow-subtle);
         }
 
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-            border-color: rgba(212, 185, 145, 0.45);
+        .product-card:hover {
+            border-color: var(--card-border-hover);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
         }
 
-        .badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: rgba(15, 14, 18, 0.88);
-            backdrop-filter: blur(8px);
-            border: 1px solid var(--gold-accent);
-            color: var(--gold-accent);
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-weight: 600;
-            z-index: 2;
-        }
-
-        .sale-tag {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--sale-red);
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            z-index: 2;
-        }
-
+        /* Image Container with Zoom Magnification */
         .image-wrapper {
             position: relative;
             width: 100%;
-            padding-top: 133%; /* 3:4 or 2:3 vertical framing */
-            background-color: #121016;
+            padding-top: 133.33%; /* 3:4 Aspect Ratio */
             overflow: hidden;
+            background-color: #f2f0eb;
+            cursor: crosshair;
         }
 
-        .image-wrapper img {
+        .image-wrapper img.zoom-target {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.15s ease-out;
+            transform-origin: center center;
+            will-change: transform;
         }
 
-        .card:hover .image-wrapper img {
-            transform: scale(1.03);
+        /* Magnification Tip Badge */
+        .zoom-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: #333333;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 5px 9px;
+            border-radius: 30px;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            transition: opacity 0.3s ease;
         }
 
-        .card-content {
+        .image-wrapper:hover .zoom-badge {
+            opacity: 0;
+        }
+
+        /* Sale Tag */
+        .sale-tag {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background-color: var(--sale-red);
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 2px;
+            box-shadow: 0 2px 6px rgba(201, 59, 59, 0.3);
+            z-index: 2;
+        }
+
+        /* Card Content */
+        .card-body {
             padding: 24px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
-        .product-collection {
+        .product-genre {
             font-size: 0.75rem;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
+            color: var(--accent-gold);
             text-transform: uppercase;
-            color: var(--gold-accent);
+            font-weight: 700;
             margin-bottom: 6px;
         }
 
         .product-title {
             font-family: 'Cinzel', serif;
             font-size: 1.25rem;
-            color: var(--gold-light);
-            margin-bottom: 10px;
+            color: var(--text-title);
+            margin-bottom: 8px;
+            font-weight: 700;
             line-height: 1.35;
         }
 
         .product-desc {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
+            font-size: 0.88rem;
+            color: var(--text-body);
             margin-bottom: 20px;
             flex-grow: 1;
+            line-height: 1.55;
         }
 
-        .price-box {
+        /* Price Row */
+        .price-row {
             display: flex;
             align-items: baseline;
-            gap: 10px;
-            margin-bottom: 18px;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-top: 14px;
+            border-top: 1px solid var(--card-border);
         }
 
-        .sale-price {
-            font-size: 1.5rem;
+        .current-price {
+            font-size: 1.45rem;
             font-weight: 700;
-            color: var(--gold-light);
+            color: var(--text-title);
         }
 
         .original-price {
             font-size: 1rem;
-            color: #736c64;
+            color: var(--text-muted);
             text-decoration: line-through;
         }
 
-        .product-features {
-            font-size: 0.8rem;
-            color: #8c8275;
-            margin-bottom: 18px;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            padding-top: 12px;
+        .discount-pill {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--sale-red);
+            background-color: #fde8e8;
+            padding: 3px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+            margin-left: auto;
         }
 
-        .buy-btn {
+        /* CTA Button */
+        .btn-view {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            width: 100%;
-            padding: 14px 20px;
-            background: linear-gradient(135deg, #24202e, #181520);
-            border: 1px solid var(--btn-border);
-            color: var(--gold-light);
+            gap: 10px;
+            background-color: var(--btn-dark);
+            color: #ffffff;
             text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.85rem;
+            padding: 14px 20px;
+            font-size: 0.84rem;
             font-weight: 600;
             letter-spacing: 1.5px;
-            border-radius: 6px;
+            text-transform: uppercase;
+            border-radius: 3px;
             transition: all 0.25s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .buy-btn:hover {
-            background: var(--gold-accent);
-            color: #0f0e12;
-            box-shadow: 0 6px 20px rgba(212, 185, 145, 0.35);
+        .btn-view:hover {
+            background-color: var(--btn-dark-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-view svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.25s ease;
+        }
+
+        .btn-view:hover svg {
+            transform: translateX(4px);
         }
 
         /* Trust Banner */
-        .trust-section {
-            max-width: 1000px;
-            margin: 30px auto 60px;
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 10px;
-            padding: 30px 20px;
+        .trust-banner {
+            background-color: var(--bg-subtle);
+            border-top: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--card-border);
+            padding: 50px 24px;
+            margin-top: 40px;
+        }
+
+        .trust-grid {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
             text-align: center;
         }
 
-        .trust-item h4 {
+        .trust-item h3 {
             font-family: 'Cinzel', serif;
-            font-size: 0.95rem;
-            color: var(--gold-light);
-            margin-bottom: 5px;
-            letter-spacing: 1px;
+            font-size: 1.05rem;
+            letter-spacing: 1.5px;
+            color: var(--text-title);
+            margin-bottom: 8px;
+            text-transform: uppercase;
         }
 
         .trust-item p {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .trust-icon {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            display: inline-block;
         }
 
         /* Footer */
         footer {
-            border-top: 1px solid var(--card-border);
-            padding: 40px 20px;
+            background-color: var(--bg-main);
+            padding: 50px 24px 30px;
             text-align: center;
-            color: #70675c;
             font-size: 0.85rem;
+            color: var(--text-muted);
         }
 
-        footer a {
-            color: var(--gold-accent);
+        .store-direct-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--text-title);
+            border: 2px solid var(--text-title);
             text-decoration: none;
+            padding: 12px 28px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            transition: all 0.25s ease;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        .store-direct-btn:hover {
+            background-color: var(--text-title);
+            color: #ffffff;
         }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .grid { grid-template-columns: 1fr; }
-            .container { padding: 10px 15px 40px; }
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1.brand-title {
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .header-meta {
+                gap: 14px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Launch Sale Banner -->
+    <!-- Top Announcement Bar -->
     <div class="announcement-bar">
-        ⚡ Introductory Launch Promo: All Graphic T-Shirts <span>$16</span> (Regular $24) • Limited 72h Window
+        ✨ <span class="highlight">72-Hour New Launch Sale:</span> All Graphic Tees <span class="highlight">$16</span> (Reg. $24) • Worldwide Fulfilled by TeePublic
     </div>
 
-    <!-- Header Section -->
+    <!-- Storefront Header -->
     <header>
-        <img src="./store_avatar.png" alt="Midnight Chapter Club Logo" class="brand-logo">
-        <h1>Midnight Chapter Club</h1>
-        <p class="tagline">"Aesthetic apparel & paper-scented goods for the hopelessly bookish."</p>
-        <div class="trust-pill">
-            <span>Official TeePublic Merchant</span> • <span>Fast Worldwide Delivery</span>
+        <img src="./store_avatar.png" alt="Midnight Chapter Club Avatar" class="brand-avatar">
+        <h1 class="brand-title">Midnight Chapter Club</h1>
+        <p class="tagline">Apparel for midnight readers, quiet souls & aesthetic literature lovers.</p>
+        
+        <div class="header-meta">
+            <span>👕 <strong>100% Cotton</strong> Heavyweight & Classic</span>
+            <span>📏 Sizes <strong>S to 5XL</strong></span>
+            <span>📦 <strong>Global Shipping</strong> Custom Printed</span>
         </div>
+
+        <div class="divider"></div>
     </header>
 
-    <!-- Main Products Showcase -->
-    <main class="container">
-        <div class="grid">
-
-            <!-- Product 1 -->
-            <article class="card" id="fictional-characters">
-                <span class="badge">Dark Academia</span>
-                <span class="sale-tag">SAVE $8</span>
-                <div class="image-wrapper">
-                    <img src="./pin_1_male_lifestyle.jpg" alt="Emotionally Attached to Fictional Characters T-Shirt Mockup">
-                </div>
-                <div class="card-content">
-                    <div class="product-collection">The Midnight Library</div>
-                    <h2 class="product-title">Emotionally Attached To Fictional Characters</h2>
-                    <p class="product-desc">
-                        A Victorian woodcut engraving featuring an ornate antique skeleton key wrapped in thorny wild rose botanicals. For readers who fall completely in love with storybook worlds.
-                    </p>
-                    <div class="product-features">
-                        100% Ring-Spun Cotton • Classic Unisex Fit • Sizes S - 5XL
-                    </div>
-                    <div class="price-box">
-                        <span class="sale-price">$16.00</span>
-                        <span class="original-price">$24.00</span>
-                    </div>
-                    <a href="https://www.teepublic.com/t-shirt/101172114-emotionally-attached-to-fictional-characters-vinta?store_id=3654611" target="_blank" rel="noopener noreferrer" class="buy-btn">
-                        View & Buy on TeePublic →
-                    </a>
-                </div>
-            </article>
-
-            <!-- Product 2 -->
-            <article class="card" id="midnight-reader">
-                <span class="badge">Celestial Series</span>
-                <span class="sale-tag">SAVE $8</span>
-                <div class="image-wrapper">
-                    <img src="./pin_2_male_lifestyle.jpg" alt="Midnight Reader Club Just One More Chapter T-Shirt Mockup">
-                </div>
-                <div class="card-content">
-                    <div class="product-collection">Late Night Society</div>
-                    <h2 class="product-title">Midnight Reader Club: One More Chapter</h2>
-                    <p class="product-desc">
-                        Antique celestial woodcut engraving of an open book resting beneath a glowing crescent moon and starry constellations. Dedicated to night owls who always read past bedtime.
-                    </p>
-                    <div class="product-features">
-                        Ultra-Soft Cotton • Vintage Charcoal Black • Sizes S - 5XL
-                    </div>
-                    <div class="price-box">
-                        <span class="sale-price">$16.00</span>
-                        <span class="original-price">$24.00</span>
-                    </div>
-                    <a href="https://www.teepublic.com/t-shirt/101172157-midnight-reader-club-just-one-more-chapter-celesti?store_id=3654611" target="_blank" rel="noopener noreferrer" class="buy-btn">
-                        View & Buy on TeePublic →
-                    </a>
-                </div>
-            </article>
-
-            <!-- Product 3 -->
-            <article class="card" id="old-books-coffee">
-                <span class="badge">Cozy Classic</span>
-                <span class="sale-tag">SAVE $8</span>
-                <div class="image-wrapper">
-                    <img src="./pin_3_male_lifestyle.jpg" alt="Smells Like Old Books and Fresh Coffee T-Shirt Mockup">
-                </div>
-                <div class="card-content">
-                    <div class="product-collection">Coffee & Paperbacks</div>
-                    <h2 class="product-title">Smells Like Old Books & Fresh Coffee</h2>
-                    <p class="product-desc">
-                        The ultimate sensory pairing: aged library pages and freshly brewed espresso. Vintage Victorian bookplate engraving with eucalyptus accents on dark forest cotton.
-                    </p>
-                    <div class="product-features">
-                        Premium Heavyweight Cotton • Heather Forest & Black • Sizes S - 5XL
-                    </div>
-                    <div class="price-box">
-                        <span class="sale-price">$16.00</span>
-                        <span class="original-price">$24.00</span>
-                    </div>
-                    <a href="https://www.teepublic.com/t-shirt/101175405-smells-like-old-books-and-fresh-coffee-vintage-bot?store_id=3654611" target="_blank" rel="noopener noreferrer" class="buy-btn">
-                        View & Buy on TeePublic →
-                    </a>
-                </div>
-            </article>
-
+    <!-- Catalog Main -->
+    <main>
+        <div class="catalog-header">
+            <div class="catalog-count">The Core Collection (6 Designs Available)</div>
+            <div class="catalog-notice">
+                <span class="badge">OFFICIAL TEEPUBLIC PARTNER</span>
+                <span>Click any item to view live on TeePublic</span>
+            </div>
         </div>
 
-        <!-- Trust Badges Section -->
-        <section class="trust-section">
-            <div class="trust-item">
-                <h4>Printed by TeePublic</h4>
-                <p>Direct-to-garment DTG print with eco-friendly vibrant inks.</p>
+        <div class="products-grid">
+
+            <!-- PRODUCT 1: Emotionally Attached -->
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <span class="sale-tag">Sale $16</span>
+                    <img src="./catalog_1_emotionally_attached.jpg" alt="Emotionally Attached to Fictional Characters T-Shirt" class="zoom-target">
+                    <div class="zoom-badge">🔍 Hover to Zoom</div>
+                </div>
+                <div class="card-body">
+                    <div class="product-genre">Literary Fiction • Dark Academia</div>
+                    <h2 class="product-title">Emotionally Attached</h2>
+                    <p class="product-desc">Ornate antique floral skeleton key entwined with wild briar roses, celebrating the fictional characters who ruined our sleep schedules.</p>
+                    
+                    <div class="price-row">
+                        <span class="current-price">$16.00</span>
+                        <span class="original-price">$24.00</span>
+                        <span class="discount-pill">33% OFF</span>
+                    </div>
+
+                    <a href="https://www.teepublic.com/t-shirt/101172114-emotionally-attached-to-fictional-characters?store_id=3654611" target="_blank" rel="noopener noreferrer" class="btn-view">
+                        View On TeePublic
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
             </div>
-            <div class="trust-item">
-                <h4>Worldwide Shipping</h4>
-                <p>Fast global shipping with direct tracking on all parcels.</p>
+
+            <!-- PRODUCT 2: Midnight Reader Club -->
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <span class="sale-tag">Sale $16</span>
+                    <img src="./catalog_2_midnight_reader_club.jpg" alt="Midnight Reader Club: Just One More Chapter T-Shirt" class="zoom-target">
+                    <div class="zoom-badge">🔍 Hover to Zoom</div>
+                </div>
+                <div class="card-body">
+                    <div class="product-genre">Celestial Bookplate • Night Owl</div>
+                    <h2 class="product-title">Midnight Reader Club</h2>
+                    <p class="product-desc">An open vintage novel illuminated by a crescent moon, stardust constellations, and botanical laurels with the reader's motto: Just One More Chapter.</p>
+                    
+                    <div class="price-row">
+                        <span class="current-price">$16.00</span>
+                        <span class="original-price">$24.00</span>
+                        <span class="discount-pill">33% OFF</span>
+                    </div>
+
+                    <a href="https://www.teepublic.com/t-shirt/101172157-midnight-reader-club-just-one-more-chapter?store_id=3654611" target="_blank" rel="noopener noreferrer" class="btn-view">
+                        View On TeePublic
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
             </div>
-            <div class="trust-item">
-                <h4>Secure Checkout</h4>
-                <p>Guaranteed buyer protection via PayPal, Apple Pay, Visa & Mastercard.</p>
+
+            <!-- PRODUCT 3: Smells Like Old Books & Fresh Coffee -->
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <span class="sale-tag">Sale $16</span>
+                    <img src="./catalog_3_old_books_coffee.jpg" alt="Smells Like Old Books and Fresh Coffee T-Shirt" class="zoom-target">
+                    <div class="zoom-badge">🔍 Hover to Zoom</div>
+                </div>
+                <div class="card-body">
+                    <div class="product-genre">Cafe Reader • Cozy Aesthetic</div>
+                    <h2 class="product-title">Old Books & Fresh Coffee</h2>
+                    <p class="product-desc">An antique woodcut illustration of a steaming ceramic mug resting atop a stack of vintage hardcover novels with botanical coffee sprigs.</p>
+                    
+                    <div class="price-row">
+                        <span class="current-price">$16.00</span>
+                        <span class="original-price">$24.00</span>
+                        <span class="discount-pill">33% OFF</span>
+                    </div>
+
+                    <a href="https://www.teepublic.com/t-shirt/101175405-smells-like-old-books-and-fresh-coffee-vintage-bot?store_id=3654611" target="_blank" rel="noopener noreferrer" class="btn-view">
+                        View On TeePublic
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
             </div>
-        </section>
+
+            <!-- PRODUCT 4: 90s Bootleg Dark Academia -->
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <span class="sale-tag">New • $16</span>
+                    <img src="./catalog_4_90s_bootleg_dark_academia.jpg" alt="Dark Academia Read Dangerously Vintage 90s Bootleg T-Shirt" class="zoom-target">
+                    <div class="zoom-badge">🔍 Hover to Zoom</div>
+                </div>
+                <div class="card-body">
+                    <div class="product-genre">90s Heavy Tour • Gothic Streetwear</div>
+                    <h2 class="product-title">Read Dangerously (90s Bootleg)</h2>
+                    <p class="product-desc">Classical Renaissance marble bust framed by velvet burgundy roses, melting taper candles, celestial grimoire, and distressed gold halftone typography.</p>
+                    
+                    <div class="price-row">
+                        <span class="current-price">$16.00</span>
+                        <span class="original-price">$24.00</span>
+                        <span class="discount-pill">33% OFF</span>
+                    </div>
+
+                    <a href="https://www.teepublic.com/t-shirt/101253678-dark-academia-read-dangerously-vintage-90s-bootleg?store_id=3654611" target="_blank" rel="noopener noreferrer" class="btn-view">
+                        View On TeePublic
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRODUCT 5: Art Nouveau Tarot The Reader -->
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <span class="sale-tag">New • $16</span>
+                    <img src="./catalog_5_art_nouveau_tarot.jpg" alt="The Reader Art Nouveau Tarot Card Celestial T-Shirt" class="zoom-target">
+                    <div class="zoom-badge">🔍 Hover to Zoom</div>
+                </div>
+                <div class="card-body">
+                    <div class="product-genre">Alphonse Mucha • Celestial Tarot</div>
+                    <h2 class="product-title">The Reader (Tarot XIX)</h2>
+                    <p class="product-desc">Alphonse Mucha-inspired gilded tarot card featuring an ethereal crowned reader with celestial moths and stardust rising from an illuminated book.</p>
+                    
+                    <div class="price-row">
+                        <span class="current-price">$16.00</span>
+                        <span class="original-price">$24.00</span>
+                        <span class="discount-pill">33% OFF</span>
+                    </div>
+
+                    <a href="https://www.teepublic.com/t-shirt/101253688-the-reader-art-nouveau-tarot-card-vintage-celestia?store_id=3654611" target="_blank" rel="noopener noreferrer" class="btn-view">
+                        View On TeePublic
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRODUCT 6: Japanese Ukiyo-e Cat Reader -->
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <span class="sale-tag">New • $16</span>
+                    <img src="./catalog_6_japanese_cat_reader.jpg" alt="Midnight Chapter Japanese Ukiyo-e Cat Reader T-Shirt" class="zoom-target">
+                    <div class="zoom-badge">🔍 Hover to Zoom</div>
+                </div>
+                <div class="card-body">
+                    <div class="product-genre">Japanese Woodblock • Retro Anime</div>
+                    <h2 class="product-title">Ukiyo-e Cat Reader</h2>
+                    <p class="product-desc">Authentic Japanese woodblock print featuring a black cat in an ornate kimono reading an antique scroll under a giant harvest moon, waves, and lantern.</p>
+                    
+                    <div class="price-row">
+                        <span class="current-price">$16.00</span>
+                        <span class="original-price">$24.00</span>
+                        <span class="discount-pill">33% OFF</span>
+                    </div>
+
+                    <a href="https://www.teepublic.com/t-shirt/101253703-midnight-chapter-japanese-ukiyo-e-cat-reader-retro?store_id=3654611" target="_blank" rel="noopener noreferrer" class="btn-view">
+                        View On TeePublic
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
     </main>
+
+    <!-- Trust Features -->
+    <section class="trust-banner">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon">🌿</div>
+                <h3>Premium Cotton</h3>
+                <p>100% combed ring-spun cotton. Ultra-soft, pre-shrunk, and built for durability wash after wash.</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">📦</div>
+                <h3>TeePublic Fulfilled</h3>
+                <p>Officially printed, packed, and shipped globally by TeePublic with direct order tracking.</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">🏷️</div>
+                <h3>Sizes S to 5XL</h3>
+                <p>Inclusive unisex sizing from S to 5XL. Also available in Heavyweight Hoodies, Mugs, and Totes.</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">🔒</div>
+                <h3>Secure Checkout</h3>
+                <p>Encrypted 256-bit SSL checkout backed by TeePublic's buyer satisfaction guarantee.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Midnight Chapter Club. All artwork curated by <a href="https://www.teepublic.com/user/artestheticvibez" target="_blank" rel="noopener noreferrer">Artestheticvibez</a>.</p>
-        <p style="margin-top: 8px; font-size: 0.78rem;">Orders are printed, packed, and fulfilled by TeePublic.com.</p>
+        <a href="https://www.teepublic.com/user/artestheticvibez" target="_blank" rel="noopener noreferrer" class="store-direct-btn">
+            Browse All Products on TeePublic Store ➔
+        </a>
+        <p>© 2026 Midnight Chapter Club (artestheticvibez). All artwork rights reserved.</p>
+        <p>Officially printed and distributed worldwide by TeePublic.</p>
     </footer>
 
+    <!-- Interactive Cursor Magnification Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrappers = document.querySelectorAll('.image-wrapper');
+
+            wrappers.forEach(wrapper => {
+                const img = wrapper.querySelector('.zoom-target');
+
+                wrapper.addEventListener('mousemove', (e) => {
+                    const rect = wrapper.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width) * 100;
+                    const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+                    img.style.transformOrigin = `${x}% ${y}%`;
+                    img.style.transform = 'scale(2.2)';
+                });
+
+                wrapper.addEventListener('mouseleave', () => {
+                    img.style.transform = 'scale(1)';
+                    img.style.transformOrigin = 'center center';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
